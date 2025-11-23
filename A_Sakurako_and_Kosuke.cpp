@@ -2,16 +2,16 @@
 using namespace std;
 typedef long long ll;
 void solve(){
-    int x,n;
-    cin>>x>>n;
+    int n;cin>>n;
     if(n%2==0){
-        cout<<0<<endl;
+        cout<<"Sakurako"<<endl;
     }else{
-        cout<<x<<endl;
+        cout<<"Kosuke"<<endl;
     }
 }
 int main(){
     int t;cin>>t;
-    while(t--)
-    {solve();}
+    while(t--){
+        solve();
+    }
 }
