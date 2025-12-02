@@ -1,19 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 void solve(){
-    int n;cin>>n;
-    vector<int>v(n);
-    for(int i=0;i<n;i++) cin>>v[i];
-    bool ans=true;
-    if(v[0]==1){
+    int a,b,c,d;
+    cin>>a>>b>>c>>d;
+    if(a==b && b==c &&c==d){
         cout<<"YES"<<endl;
     }else{
         cout<<"NO"<<endl;
     }
 }
 int main(){
-    int t;cin>>t;
+    int t;
+    cin>>t;
     while(t--)
         solve();
 }
