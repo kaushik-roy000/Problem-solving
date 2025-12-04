@@ -1,24 +1,43 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-void solve(){
-    int n;cin>>n;
-    int pos=0,neg=0;
-    for(int i=0;i<n;i++){
-        int x;cin>>x;
-        (x>0)?pos++:neg++;
-
+void solve()
+{
+    ll n;
+    cin >> n;
+    ll pos = 0, neg = 0;
+    for (ll i = 0; i < n; i++)
+    {
+        ll x;
+        cin >> x;
+        if (x == 1)
+        {
+            pos++;
+        }
+        else
+        {
+            neg++;
+        }
     }
-    if(neg==n){
-        cout<<n<<endl;
-    }else if(n==pos){
-        cout<<0<<endl;
+    ll minneg=(n/2);
+    if(minneg%2!=0){
+        minneg=minneg-1;
+    }
+    if(minneg<neg){
+        cout<<neg-minneg<<endl;
     }else{
-        cout<<abs(pos-neg)<<endl;
+        if(neg%2==0){
+            cout<<0<<endl;
+        }else{
+            cout<<1<<endl;
+        }
     }
+  
 }
-int main(){
-    int t;cin>>t; //unsolved
-    while(t--)
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
         solve();
 }
